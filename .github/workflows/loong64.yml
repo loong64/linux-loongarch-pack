@@ -58,6 +58,9 @@ jobs:
             git config --global --add safe.directory /work/linux
 
             # Setup rust
+            export RUSTUP_HOME=/work/.rustup
+            export CARGO_HOME=/work/.cargo
+            export PATH=$CARGO_HOME/bin:$PATH
             sudo apt install rustup -y
             rustup default stable
             rustup update
